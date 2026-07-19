@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ali7usseln · COFFEE · عرض اليوم</title>
-  <!-- Font Awesome للايقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
@@ -25,7 +24,7 @@
       gap: 1.8rem;
     }
 
-    /* ===== البطاقة الرئيسية - مطابقة تامة للصورة ===== */
+    /* ===== البطاقة الرئيسية ===== */
     .coffee-card {
       max-width: 420px;
       width: 100%;
@@ -40,7 +39,7 @@
       transform: scale(1.01);
     }
 
-    /* ===== رأس البطاقة: Ali7usseln — COFFEE ===== */
+    /* ===== رأس البطاقة ===== */
     .brand {
       display: flex;
       justify-content: space-between;
@@ -55,7 +54,6 @@
       letter-spacing: -0.5px;
       color: #1f140e;
       line-height: 1.2;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .brand-name i {
@@ -75,7 +73,6 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .coffee-tag i {
@@ -83,7 +80,7 @@
       color: #a67b5b;
     }
 
-    /* ===== عرض اليوم — لائيه كراميل مع كيكة الشوكولاته ===== */
+    /* ===== عرض اليوم ===== */
     .offer-headline {
       margin: 1.2rem 0 0.8rem 0;
     }
@@ -97,7 +94,6 @@
       align-items: center;
       gap: 0.4rem;
       flex-wrap: wrap;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .offer-title .dash {
@@ -119,7 +115,6 @@
       font-weight: 450;
       font-size: 1.1rem;
       flex-wrap: wrap;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .offer-sub i {
@@ -132,71 +127,29 @@
       margin: 0 0.1rem;
     }
 
-    /* ===== المنطقة البصرية: ايقونات القهوة والكيك ===== */
-    .product-visual {
-      background: #f3ebe2;
-      border-radius: 28px;
-      padding: 1.6rem 1rem 1rem;
+    /* ===== صورة العرض ===== */
+    .offer-image-container {
       margin: 1.2rem 0 1.6rem 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.02);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      background: #f3ebe2;
+      position: relative;
     }
 
-    .product-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2.8rem;
-      flex-wrap: wrap;
+    .offer-image-container img {
       width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
 
-    .icon-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.2rem;
+    .offer-image-container:hover img {
+      transform: scale(1.02);
     }
 
-    .icon-item i {
-      font-size: 2.8rem;
-      color: #3d2b1f;
-      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.03));
-    }
-
-    .icon-item span {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #5a4332;
-      letter-spacing: 0.2px;
-      background: rgba(255, 248, 240, 0.6);
-      padding: 0.1rem 0.7rem;
-      border-radius: 40px;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    .product-desc {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #3b2a1d;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(2px);
-      padding: 0.15rem 1.4rem;
-      border-radius: 40px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.02);
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    .product-desc i {
-      margin: 0 0.25rem;
-      color: #b48b6e;
-      font-size: 0.8rem;
-    }
-
-    /* ===== السعر: 15 ريال ===== */
+    /* ===== السعر ===== */
     .price-block {
       display: flex;
       align-items: baseline;
@@ -217,7 +170,6 @@
       display: flex;
       align-items: center;
       gap: 0.2rem;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .price small {
@@ -238,7 +190,6 @@
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .price-badge i {
@@ -258,7 +209,6 @@
       font-weight: 450;
       font-size: 0.9rem;
       flex-wrap: wrap;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .menu-footer i {
@@ -276,7 +226,6 @@
       font-size: 0.85rem;
     }
 
-    /* ===== سطر إضافي (طازج يومياً) ===== */
     .extra-note {
       display: flex;
       justify-content: space-between;
@@ -285,7 +234,6 @@
       border-top: 1px solid #ede4da;
       padding-top: 0.5rem;
       margin-top: 0.4rem;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .extra-note i {
@@ -323,7 +271,6 @@
       width: 100%;
       justify-content: center;
       border: 1px solid rgba(255, 255, 255, 0.05);
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .pdf-btn i {
@@ -347,6 +294,49 @@
       transform: none;
     }
 
+    /* ===== عارض PDF ===== */
+    .pdf-viewer {
+      max-width: 420px;
+      width: 100%;
+      margin-top: 1.5rem;
+      display: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+
+    .pdf-viewer.active {
+      display: block;
+    }
+
+    .pdf-viewer iframe {
+      width: 100%;
+      height: 550px;
+      border: none;
+      display: block;
+    }
+
+    .pdf-viewer .pdf-close {
+      background: #1f140e;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .pdf-viewer .pdf-close:hover {
+      background: #2c1f18;
+    }
+
     /* ===== استجابة للشاشات الصغيرة ===== */
     @media (max-width: 480px) {
       .coffee-card {
@@ -362,9 +352,6 @@
       .price {
         font-size: 2.6rem;
       }
-      .product-icons {
-        gap: 1.5rem;
-      }
       .pdf-btn {
         padding: 0.8rem 1.6rem;
         font-size: 0.95rem;
@@ -375,6 +362,9 @@
       }
       .offer-sub {
         font-size: 0.95rem;
+      }
+      .pdf-viewer iframe {
+        height: 400px;
       }
     }
   </style>
@@ -409,23 +399,14 @@
       </div>
     </div>
 
-    <!-- أيقونات المنتج -->
-    <div class="product-visual">
-      <div class="product-icons">
-        <div class="icon-item">
-          <i class="fas fa-mug-hot"></i>
-          <span>كراميل لاتيه</span>
-        </div>
-        <div class="icon-item">
-          <i class="fas fa-cake"></i>
-          <span>شوكولاته</span>
-        </div>
-      </div>
-      <div class="product-desc">
-        <i class="fas fa-star"></i>
-        <span>fresh · creamy</span>
-        <i class="fas fa-star"></i>
-      </div>
+    <!-- ===== صورة العرض ===== -->
+    <div class="offer-image-container">
+      <!-- ⭐ غيّر الرابط أدناه لاستخدام صورتك الخاصة ⭐ -->
+      <img 
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop&crop=center" 
+        alt="عرض لائيه كراميل مع كيكة الشوكولاته"
+        loading="lazy"
+      />
     </div>
 
     <!-- السعر: 15 ريال -->
@@ -444,7 +425,6 @@
       <span class="arabic"><i class="fas fa-mug-saucer"></i> #Ali7usseln</span>
     </div>
 
-    <!-- سطر إضافي (طازج يومياً) -->
     <div class="extra-note">
       <span><i class="far fa-clock"></i> طازج يومياً</span>
       <span><i class="fas fa-heart heart"></i> كراميل</span>
@@ -459,59 +439,44 @@
     </button>
   </div>
 
-  <!-- مكتبة html2pdf -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
-  </script>
+  <!-- ===== عارض PDF ===== -->
+  <div class="pdf-viewer" id="pdfViewer">
+    <iframe id="pdfFrame" src=""></iframe>
+    <button class="pdf-close" id="pdfCloseBtn">
+      <i class="fas fa-times"></i> إغلاق PDF
+    </button>
+  </div>
 
   <script>
     (function() {
       const pdfBtn = document.getElementById('pdfTriggerBtn');
-      const card = document.getElementById('coffeeCard');
+      const pdfViewer = document.getElementById('pdfViewer');
+      const pdfFrame = document.getElementById('pdfFrame');
+      const pdfCloseBtn = document.getElementById('pdfCloseBtn');
 
-      async function generatePDF() {
-        if (!card) return;
+      // ⭐ غيّر اسم ملف PDF هنا ⭐
+      const PDF_FILE_NAME = 'menu.pdf';
 
-        const clone = card.cloneNode(true);
-        clone.style.transform = 'none';
-        clone.style.margin = '0 auto';
-        clone.style.maxWidth = '420px';
-        clone.style.boxShadow = '0 12px 30px rgba(0,0,0,0.06)';
-        clone.style.borderRadius = '44px 44px 28px 28px';
-
-        const wrapper = document.createElement('div');
-        wrapper.style.background = '#e8e0d8';
-        wrapper.style.padding = '24px 18px';
-        wrapper.style.display = 'flex';
-        wrapper.style.justifyContent = 'center';
-        wrapper.style.alignItems = 'center';
-        wrapper.style.width = '100%';
-        wrapper.appendChild(clone);
-
-        const opt = {
-          margin: [0.4, 0.4, 0.4, 0.4],
-          filename: 'Ali7usseln_coffee_offer.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-          jsPDF: { unit: 'in', format: 'a5', orientation: 'portrait' }
-        };
-
-        try {
-          pdfBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> جاري تحضير PDF...`;
-          pdfBtn.disabled = true;
-
-          await html2pdf().set(opt).from(wrapper).save();
-
+      function togglePDF() {
+        if (pdfViewer.classList.contains('active')) {
+          pdfViewer.classList.remove('active');
+          pdfFrame.src = '';
           pdfBtn.innerHTML = `<i class="fas fa-file-pdf"></i> عرض الـ PDF <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>`;
-          pdfBtn.disabled = false;
-        } catch (error) {
-          console.warn('PDF error:', error);
-          pdfBtn.innerHTML = `<i class="fas fa-file-pdf"></i> PDF (حاول مجدداً)`;
-          pdfBtn.disabled = false;
-          alert('حدث خطأ بسيط، يرجى المحاولة مرة أخرى.');
+        } else {
+          pdfFrame.src = PDF_FILE_NAME;
+          pdfViewer.classList.add('active');
+          pdfBtn.innerHTML = `<i class="fas fa-times"></i> إغلاق PDF`;
         }
       }
 
-      pdfBtn.addEventListener('click', generatePDF);
+      pdfBtn.addEventListener('click', togglePDF);
+      pdfCloseBtn.addEventListener('click', togglePDF);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && pdfViewer.classList.contains('active')) {
+          togglePDF();
+        }
+      });
     })();
   </script>
 

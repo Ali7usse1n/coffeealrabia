@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ali7usseln · COFFEE · عرض اليوم</title>
-  <!-- Font Awesome (للايقونات) -->
+  <!-- Font Awesome للايقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
@@ -15,24 +15,24 @@
 
     body {
       min-height: 100vh;
-      background: #f2ede6;
+      background: #e8e0d8;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
       padding: 1.5rem;
       gap: 1.8rem;
     }
 
-    /* ----- البطاقة الرئيسية - مطابقة للصورة ----- */
+    /* ===== البطاقة الرئيسية - مطابقة تامة للصورة ===== */
     .coffee-card {
-      max-width: 430px;
+      max-width: 420px;
       width: 100%;
       background: #ffffff;
-      border-radius: 48px 48px 32px 32px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.03);
-      padding: 2rem 2rem 1.8rem;
+      border-radius: 44px 44px 28px 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.03);
+      padding: 2rem 1.8rem 1.6rem;
       transition: transform 0.2s ease;
     }
 
@@ -40,87 +40,91 @@
       transform: scale(1.01);
     }
 
-    /* رأس البطاقة: Ali7usseln — COFFEE */
+    /* ===== رأس البطاقة: Ali7usseln — COFFEE ===== */
     .brand {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 0.6rem;
+      align-items: center;
+      margin-bottom: 0.5rem;
       flex-wrap: wrap;
     }
 
     .brand-name {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #2c1e15;
+      letter-spacing: -0.5px;
+      color: #1f140e;
       line-height: 1.2;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .brand-name i {
       color: #a67b5b;
-      font-size: 1.9rem;
-      margin-left: 0.3rem;
+      font-size: 1.8rem;
+      margin-left: 0.2rem;
     }
 
     .coffee-tag {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #6b4f3a;
-      background: #f1e9e0;
-      padding: 0.25rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #5a4332;
+      background: #efe7de;
+      padding: 0.25rem 1.1rem;
       border-radius: 40px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.3px;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .coffee-tag i {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #a67b5b;
     }
 
-    /* عرض اليوم — لائيه كراميل مع كيكة الشوكولاته */
+    /* ===== عرض اليوم — لائيه كراميل مع كيكة الشوكولاته ===== */
     .offer-headline {
-      margin: 1.4rem 0 1rem 0;
+      margin: 1.2rem 0 0.8rem 0;
     }
 
     .offer-title {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       font-weight: 600;
-      color: #2c1e15;
+      color: #1f140e;
       letter-spacing: -0.3px;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.4rem;
       flex-wrap: wrap;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .offer-title .dash {
-      background: #f2e2d0;
-      padding: 0.1rem 1.2rem;
+      background: #efe4d8;
+      padding: 0 0.9rem;
       border-radius: 60px;
       font-weight: 600;
-      color: #3d281c;
-      font-size: 1.6rem;
-      line-height: 1.4;
+      color: #2c1a0e;
+      font-size: 1.5rem;
+      line-height: 1.5;
     }
 
     .offer-sub {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      margin-top: 0.2rem;
-      color: #5c4535;
+      gap: 0.5rem;
+      margin-top: 0.1rem;
+      color: #4d3a2b;
       font-weight: 450;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       flex-wrap: wrap;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .offer-sub i {
       color: #b48b6e;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .offer-sub .dot {
@@ -128,23 +132,23 @@
       margin: 0 0.1rem;
     }
 
-    /* المنطقة البصرية: ايقونات القهوة والكيك */
+    /* ===== المنطقة البصرية: ايقونات القهوة والكيك ===== */
     .product-visual {
-      background: #f7efe8;
-      border-radius: 32px;
-      padding: 1.8rem 1.2rem 1.2rem;
-      margin: 1.2rem 0 1.8rem 0;
+      background: #f3ebe2;
+      border-radius: 28px;
+      padding: 1.6rem 1rem 1rem;
+      margin: 1.2rem 0 1.6rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.02);
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.02);
     }
 
     .product-icons {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2.5rem;
+      gap: 2.8rem;
       flex-wrap: wrap;
       width: 100%;
     }
@@ -157,162 +161,180 @@
     }
 
     .icon-item i {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #3d2b1f;
-      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.04));
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.03));
     }
 
     .icon-item span {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 500;
-      color: #5f4a38;
-      letter-spacing: 0.3px;
-      background: rgba(255, 255, 240, 0.5);
-      padding: 0.15rem 0.7rem;
+      color: #5a4332;
+      letter-spacing: 0.2px;
+      background: rgba(255, 248, 240, 0.6);
+      padding: 0.1rem 0.7rem;
       border-radius: 40px;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .product-desc {
-      margin-top: 0.6rem;
-      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: #3b2a1d;
-      background: #ffffffcc;
+      background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(2px);
-      padding: 0.2rem 1.5rem;
+      padding: 0.15rem 1.4rem;
       border-radius: 40px;
-      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.02);
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .product-desc i {
-      margin: 0 0.3rem;
-      color: #a67b5b;
+      margin: 0 0.25rem;
+      color: #b48b6e;
+      font-size: 0.8rem;
     }
 
-    /* السعر */
+    /* ===== السعر: 15 ريال ===== */
     .price-block {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
       background: #ffffff;
-      padding: 0.4rem 0.2rem 0.6rem 0.2rem;
-      border-bottom: 2px dashed #e4d7cc;
-      margin-bottom: 1rem;
+      padding: 0.2rem 0.1rem 0.4rem 0.1rem;
+      border-bottom: 2px dashed #e0d3c8;
+      margin-bottom: 0.9rem;
       flex-wrap: wrap;
     }
 
     .price {
-      font-size: 3.4rem;
+      font-size: 3.2rem;
       font-weight: 700;
-      color: #1f140e;
-      letter-spacing: -0.02em;
+      color: #1a110c;
+      letter-spacing: -0.5px;
       line-height: 1;
       display: flex;
       align-items: center;
       gap: 0.2rem;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .price small {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 500;
       color: #6b4f3a;
       margin-left: 0.2rem;
     }
 
     .price-badge {
-      background: #f2e2d0;
-      padding: 0.25rem 1.2rem;
+      background: #efe4d8;
+      padding: 0.2rem 1.1rem;
       border-radius: 60px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: #2c1a0e;
       letter-spacing: 0.2px;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.3rem;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .price-badge i {
       color: #a67b5b;
+      font-size: 0.8rem;
     }
 
-    /* منيو الكافي */
+    /* ===== منيو الكافي ===== */
     .menu-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 0.6rem;
+      margin-top: 0.4rem;
       padding-top: 0.3rem;
-      border-top: 1px solid #ede5db;
-      color: #6b5847;
+      border-top: 1px solid #e8ddd2;
+      color: #5a4332;
       font-weight: 450;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       flex-wrap: wrap;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .menu-footer i {
       color: #a67b5b;
       margin-right: 0.3rem;
+      font-size: 0.85rem;
     }
 
     .menu-footer .arabic {
       font-weight: 500;
-      letter-spacing: 0.3px;
-      background: #f3ece4;
-      padding: 0.15rem 1rem;
+      letter-spacing: 0.2px;
+      background: #f0e7de;
+      padding: 0.1rem 0.9rem;
       border-radius: 60px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
-    /* سطر إضافي (طازج يومياً) */
+    /* ===== سطر إضافي (طازج يومياً) ===== */
     .extra-note {
       display: flex;
       justify-content: space-between;
-      font-size: 0.7rem;
-      color: #bbaa9a;
-      border-top: 1px solid #eee7df;
-      padding-top: 0.6rem;
-      margin-top: 0.5rem;
+      font-size: 0.65rem;
+      color: #b09a88;
+      border-top: 1px solid #ede4da;
+      padding-top: 0.5rem;
+      margin-top: 0.4rem;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
-    /* ----- زر PDF ----- */
+    .extra-note i {
+      font-size: 0.65rem;
+    }
+
+    .extra-note .heart {
+      color: #c29b7a;
+    }
+
+    /* ===== زر PDF ===== */
     .pdf-button-wrapper {
-      max-width: 430px;
+      max-width: 420px;
       width: 100%;
       display: flex;
       justify-content: center;
-      margin-top: -0.2rem;
+      margin-top: -0.1rem;
     }
 
     .pdf-btn {
-      background: #2c1e15;
+      background: #1f140e;
       border: none;
-      padding: 1rem 2.8rem;
+      padding: 0.9rem 2.8rem;
       border-radius: 60px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: #f9f3ec;
-      box-shadow: 0 8px 18px rgba(44, 30, 21, 0.15);
+      box-shadow: 0 8px 20px rgba(31, 20, 14, 0.18);
       display: inline-flex;
       align-items: center;
       gap: 0.8rem;
       cursor: pointer;
       transition: all 0.2s ease;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       width: 100%;
       justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .pdf-btn i {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #dbbda6;
     }
 
     .pdf-btn:hover {
-      background: #3f2c1f;
+      background: #2c1f18;
       transform: scale(1.02);
-      box-shadow: 0 12px 24px rgba(44, 30, 21, 0.2);
+      box-shadow: 0 12px 28px rgba(31, 20, 14, 0.22);
     }
 
     .pdf-btn:active {
@@ -325,34 +347,41 @@
       transform: none;
     }
 
-    /* استجابة للشاشات الصغيرة */
+    /* ===== استجابة للشاشات الصغيرة ===== */
     @media (max-width: 480px) {
       .coffee-card {
-        padding: 1.5rem 1.2rem;
+        padding: 1.4rem 1.2rem;
         border-radius: 36px;
       }
       .brand-name {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
       }
       .offer-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
       .price {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
       }
       .product-icons {
         gap: 1.5rem;
       }
       .pdf-btn {
-        padding: 0.9rem 1.8rem;
-        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+        font-size: 0.95rem;
+      }
+      .coffee-tag {
+        font-size: 0.8rem;
+        padding: 0.15rem 0.9rem;
+      }
+      .offer-sub {
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========== البطاقة ========== -->
+  <!-- ===== البطاقة ===== -->
   <div class="coffee-card" id="coffeeCard">
 
     <!-- Ali7usseln — COFFEE -->
@@ -393,9 +422,9 @@
         </div>
       </div>
       <div class="product-desc">
-        <i class="fas fa-star" style="color: #d4a373;"></i>
+        <i class="fas fa-star"></i>
         <span>fresh · creamy</span>
-        <i class="fas fa-star" style="color: #d4a373;"></i>
+        <i class="fas fa-star"></i>
       </div>
     </div>
 
@@ -418,20 +447,20 @@
     <!-- سطر إضافي (طازج يومياً) -->
     <div class="extra-note">
       <span><i class="far fa-clock"></i> طازج يومياً</span>
-      <span><i class="fas fa-heart" style="color: #c29b7a;"></i> كراميل</span>
+      <span><i class="fas fa-heart heart"></i> كراميل</span>
     </div>
   </div>
 
-  <!-- ========== زر PDF ========== -->
+  <!-- ===== زر PDF ===== -->
   <div class="pdf-button-wrapper">
     <button class="pdf-btn" id="pdfTriggerBtn">
       <i class="fas fa-file-pdf"></i> عرض الـ PDF
-      <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i>
+      <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
     </button>
   </div>
 
-  <!-- مكتبة html2pdf لإنشاء الـ PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- مكتبة html2pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
   </script>
 
   <script>
@@ -442,26 +471,22 @@
       async function generatePDF() {
         if (!card) return;
 
-        // نأخذ نسخة من البطاقة لعرضها في الـ PDF بدون تأثيرات الزر
         const clone = card.cloneNode(true);
         clone.style.transform = 'none';
         clone.style.margin = '0 auto';
-        clone.style.maxWidth = '430px';
+        clone.style.maxWidth = '420px';
         clone.style.boxShadow = '0 12px 30px rgba(0,0,0,0.06)';
-        clone.style.borderRadius = '48px 48px 32px 32px';
+        clone.style.borderRadius = '44px 44px 28px 28px';
 
-        // غلاف بخلفية متناسقة
         const wrapper = document.createElement('div');
-        wrapper.style.background = '#f2ede6';
-        wrapper.style.padding = '28px 20px';
+        wrapper.style.background = '#e8e0d8';
+        wrapper.style.padding = '24px 18px';
         wrapper.style.display = 'flex';
         wrapper.style.justifyContent = 'center';
         wrapper.style.alignItems = 'center';
-        wrapper.style.minHeight = 'auto';
         wrapper.style.width = '100%';
         wrapper.appendChild(clone);
 
-        // إعدادات الـ PDF
         const opt = {
           margin: [0.4, 0.4, 0.4, 0.4],
           filename: 'Ali7usseln_coffee_offer.pdf',
@@ -476,7 +501,7 @@
 
           await html2pdf().set(opt).from(wrapper).save();
 
-          pdfBtn.innerHTML = `<i class="fas fa-file-pdf"></i> عرض الـ PDF <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i>`;
+          pdfBtn.innerHTML = `<i class="fas fa-file-pdf"></i> عرض الـ PDF <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>`;
           pdfBtn.disabled = false;
         } catch (error) {
           console.warn('PDF error:', error);

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> .  كفتريا الربيع  ·  </title>
+  <title>كفتريا الربيع</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
@@ -14,363 +17,260 @@
 
     body {
       min-height: 100vh;
-      background: #e8e0d8;
+      background: #1c232a;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      padding: 1.5rem;
-      gap: 1.8rem;
+      font-family: 'Cairo', sans-serif;
+      padding: 0.8rem;
+      gap: 0.8rem;
     }
 
+    /* ===== البطاقة الرئيسية ===== */
     .coffee-card {
-      max-width: 420px;
+      max-width: 330px;
       width: 100%;
-      background: #ffffff;
-      border-radius: 44px 44px 28px 28px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.03);
-      padding: 2rem 1.8rem 1.6rem;
-      transition: transform 0.2s ease;
+      background: #4a5c66; /* لون الخلفية الأزرق الزيتي المطفأ */
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      padding: 1.2rem 1rem 0.9rem;
+      text-align: center;
+      border: 2px solid #d4af37; /* إطار ذهبي خارجي */
+      position: relative;
     }
 
-    .coffee-card:hover {
-      transform: scale(1.01);
-    }
-
+    /* رأس البطاقة والعلامة التجارية */
     .brand {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
       margin-bottom: 0.5rem;
-      flex-wrap: wrap;
+    }
+
+    .brand i.main-icon {
+      color: #d4af37;
+      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
     }
 
     .brand-name {
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #1f140e;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #d4af37; /* لون خط اسم الكافيه ذهبي */
       line-height: 1.2;
     }
 
-    .brand-name i {
-      color: #a67b5b;
-      font-size: 1.8rem;
-      margin-left: 0.2rem;
-    }
-
     .coffee-tag {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #5a4332;
-      background: #efe7de;
-      padding: 0.25rem 1.1rem;
-      border-radius: 40px;
-      letter-spacing: 0.3px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #3b4952;
+      background: #8fa2ad;
+      padding: 0.15rem 0.8rem;
+      border-radius: 50px;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.3rem;
+      margin-top: 0.2rem;
     }
 
-    .coffee-tag i {
-      font-size: 0.8rem;
-      color: #a67b5b;
-    }
-
+    /* شريط عرض اليوم */
     .offer-headline {
-      margin: 1.2rem 0 0.8rem 0;
+      margin: 0.5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .offer-title {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #1f140e;
-      letter-spacing: -0.3px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    .offer-title .dash {
-      background: #efe4d8;
-      padding: 0 0.9rem;
-      border-radius: 60px;
-      font-weight: 600;
-      color: #2c1a0e;
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
-
-    .offer-sub {
-      display: flex;
-      align-items: center;
+      justify-content: center;
       gap: 0.5rem;
-      margin-top: 0.1rem;
-      color: #4d3a2b;
-      font-weight: 450;
-      font-size: 1.1rem;
-      flex-wrap: wrap;
+      background: #38464f;
+      padding: 0.25rem 1rem;
+      border-radius: 12px;
+      width: 100%;
+      border: 1px solid rgba(212, 175, 55, 0.3);
     }
 
-    .offer-sub i {
-      color: #b48b6e;
-      font-size: 1.1rem;
+    .offer-title i {
+      color: #d4af37;
+      font-size: 0.8rem;
     }
 
-    .offer-sub .dot {
-      color: #b48b6e;
-      margin: 0 0.1rem;
-    }
-
+    /* حاوية الصورة */
     .offer-image-container {
-      margin: 1.2rem 0 1.6rem 0;
-      border-radius: 28px;
+      margin: 0.6rem 0;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      background: #f3ebe2;
-      position: relative;
+      border: 2px solid #d4af37;
+      background: #2d3840;
+      height: 125px;
     }
 
     .offer-image-container img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      display: block;
     }
 
-    .offer-image-container:hover img {
-      transform: scale(1.02);
-    }
-
+    /* منطقة السعر */
     .price-block {
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      background: #ffffff;
-      padding: 0.2rem 0.1rem 0.4rem 0.1rem;
-      border-bottom: 2px dashed #e0d3c8;
-      margin-bottom: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .price {
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: #1a110c;
-      letter-spacing: -0.5px;
-      line-height: 1;
-      display: flex;
       align-items: center;
-      gap: 0.2rem;
-    }
-
-    .price small {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #6b4f3a;
-      margin-left: 0.2rem;
+      justify-content: space-between;
+      background: #38464f;
+      padding: 0.4rem 0.8rem;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      margin-bottom: 0.6rem;
     }
 
     .price-badge {
-      background: #efe4d8;
-      padding: 0.2rem 1.1rem;
-      border-radius: 60px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #2c1a0e;
-      letter-spacing: 0.2px;
+      background: #d4af37;
+      padding: 0.2rem 0.6rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #1c232a;
+      line-height: 1.1;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 0.3rem;
     }
 
-    .price-badge i {
-      color: #a67b5b;
-      font-size: 0.8rem;
+    .price small {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #d4af37;
     }
 
+    /* أسفل البطاقة */
     .menu-footer {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      margin-top: 0.4rem;
-      padding-top: 0.3rem;
-      border-top: 1px solid #e8ddd2;
-      color: #5a4332;
-      font-weight: 450;
-      font-size: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .menu-footer i {
-      color: #a67b5b;
-      margin-right: 0.3rem;
-      font-size: 0.85rem;
-    }
-
-    .menu-footer .arabic {
-      font-weight: 500;
-      letter-spacing: 0.2px;
-      background: #f0e7de;
-      padding: 0.1rem 0.9rem;
-      border-radius: 60px;
+      gap: 0.4rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      color: #ffffff;
+      font-weight: 700;
       font-size: 0.85rem;
     }
 
     .extra-note {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-size: 0.65rem;
-      color: #b09a88;
-      border-top: 1px solid #ede4da;
-      padding-top: 0.5rem;
-      margin-top: 0.4rem;
-    }
-
-    .extra-note i {
-      font-size: 0.65rem;
+      font-weight: 600;
+      color: #ccd7de;
+      padding-top: 0.3rem;
     }
 
     .extra-note .heart {
-      color: #c29b7a;
+      color: #d4af37;
     }
 
     /* ===== زر PDF ===== */
     .pdf-button-wrapper {
-      max-width: 420px;
+      max-width: 330px;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: -0.1rem;
     }
 
     .pdf-btn {
-      background: #1f140e;
-      border: none;
-      padding: 0.9rem 2.8rem;
-      border-radius: 60px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #f9f3ec;
-      box-shadow: 0 8px 20px rgba(31, 20, 14, 0.18);
-      display: inline-flex;
+      background: #38464f;
+      border: 1.5 solid #d4af37;
+      padding: 0.65rem 1.2rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      display: flex;
       align-items: center;
-      gap: 0.8rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      letter-spacing: 0.4px;
-      width: 100%;
       justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      gap: 0.6rem;
+      cursor: pointer;
       text-decoration: none;
+      width: 100%;
+      border: 1px solid #d4af37;
     }
 
     .pdf-btn i {
-      font-size: 1.2rem;
-      color: #dbbda6;
-    }
-
-    .pdf-btn:hover {
-      background: #2c1f18;
-      transform: scale(1.02);
-      box-shadow: 0 12px 28px rgba(31, 20, 14, 0.22);
+      color: #d4af37;
     }
 
     .pdf-btn:active {
-      transform: scale(0.97);
-    }
-
-    /* ===== استجابة للشاشات الصغيرة ===== */
-    @media (max-width: 480px) {
-      .coffee-card {
-        padding: 1.4rem 1.2rem;
-        border-radius: 36px;
-      }
-      .brand-name {
-        font-size: 1.7rem;
-      }
-      .offer-title {
-        font-size: 1.3rem;
-      }
-      .price {
-        font-size: 2.6rem;
-      }
-      .pdf-btn {
-        padding: 0.8rem 1.6rem;
-        font-size: 0.95rem;
-      }
-      .coffee-tag {
-        font-size: 0.8rem;
-        padding: 0.15rem 0.9rem;
-      }
-      .offer-sub {
-        font-size: 0.95rem;
-      }
+      transform: scale(0.98);
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== البطاقة ===== -->
+  <!-- ===== البطاقة الرئيسية ===== -->
   <div class="coffee-card" id="coffeeCard">
 
-    <!-- Ali7usseln — COFFEE -->
+    <!-- اسم الكافيه والوسم -->
     <div class="brand">
-      <div class="brand-name">
-             كافي الربيع  <i class="fas fa-mug-saucer"></i>
-      </div>
-      <div class="coffee-tag">
-        <i class="fas fa-seedling"></i> COFFEE
-      </div>
+      <i class="fas fa-mug-hot main-icon"></i>
+      <div class="brand-name">كفتريا الربيع</div>
+      <div class="coffee-tag">AL-RABEE CAFE</div>
     </div>
 
-    <!-- عرض اليوم — لائيه كراميل مع كيكة الشوكولاته -->
+    <!-- عرض اليوم -->
     <div class="offer-headline">
       <div class="offer-title">
-        <span>عرض اليوم</span>
-        <span class="dash">—</span>
+        <i class="fas fa-star"></i>
+        <span>عرض اليوم المميز</span>
+        <i class="fas fa-star"></i>
       </div>
-      <div class="offer-sub">
-        <span> </span>
-        <span class="dot"></span>
-            </div>
     </div>
 
-    <!-- ===== صورة العرض ===== -->
-   <div class="offer-image-container">
-  <img 
-    src="imagesoffer.png"
-    alt="عرض "
-    loading="lazy"
-  />
-</div>
+    <!-- صورة العرض -->
+    <div class="offer-image-container">
+      <img 
+        src="imagesoffer.png" 
+        alt="عرض اليوم" 
+        loading="lazy" 
+      />
+    </div>
 
-    <!-- السعر: 5  الاف دينار فقط -->
+    <!-- السعر -->
     <div class="price-block">
       <div class="price">
-        <h3>5 <small>آلاف دينار عراقي</small></h3>
+        5,000 <small>دينار عراقي</small>
       </div>
       <div class="price-badge">
-        <i class="fas fa-tag"></i> عرض اليوم
+        سعر<br>خاص
       </div>
     </div>
 
-    <!-- منيو الكافي -->
+    <!-- تذييل الكارت -->
     <div class="menu-footer">
-      <span><i class="fas fa-utensils"></i> منيو الكافي</span>
-      <span class="arabic"><i class="fas fa-mug-saucer"></i> </span>
+      <span>طعم يتجدد كل يوم</span>
     </div>
 
     <div class="extra-note">
       <span><i class="far fa-clock"></i> طازج يومياً</span>
-      <span><i class="fas fa-heart heart"></i> </span>
+      <span>صُنع بحب <i class="fas fa-heart heart"></i></span>
     </div>
   </div>
 
-  <!-- ===== زر PDF - يفتح في نافذة جديدة كاملة ===== -->
+  <!-- ===== زر PDF ===== -->
   <div class="pdf-button-wrapper">
     <a 
       href="menu.pdf" 
@@ -378,8 +278,9 @@
       class="pdf-btn" 
       id="pdfTriggerBtn"
     >
-      <i class="fas fa-file-pdf"></i> عرض  المنيو كامل
-      <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+      <i class="fas fa-angle-double-right"></i>
+      <span>تصفح المنيو الكامل</span>
+      <i class="fas fa-file-pdf"></i>
     </a>
   </div>
 
